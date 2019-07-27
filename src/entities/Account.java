@@ -1,6 +1,6 @@
 package entities;
 
-import entities.exceptions.Exceptions;
+import entities.exceptions.RExeptions;
 
 public class Account {
 	private Integer number;
@@ -47,12 +47,12 @@ public class Account {
 		balance += amount;
 	}
 	
-	public void withdraw(double amount){
+	public void withdraw(double amount) throws RExeptions {
 		if(amount > withdrawLimit) { //limite de saque menor que o valor pedido.
-			throw new Exceptions(" The amount exceeds withdraw limit");
+			throw new RExeptions(" The amount exceeds withdraw limit");
 		}
 		if (balance < amount) {// saldo indisponivel.
-			throw new Exceptions("Not enough balance");
+			throw new RExeptions("Not enough balance");
 		}
 		balance -= amount;
 	}

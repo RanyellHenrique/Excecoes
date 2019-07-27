@@ -1,9 +1,9 @@
 package entities.exceptions;
 
-public class Exceptions extends Exception {
+public class RExeptions extends Exception {
 	private static final long serialVersionUID = 1L;
 	
-	public Exceptions(String msg) {
+	public RExeptions(String msg) {
 		super(msg);
 	}
 }
